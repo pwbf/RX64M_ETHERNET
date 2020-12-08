@@ -1,0 +1,111 @@
+Renesas Optimizing Linker (W3.02.00 )             17-Aug-2020 15:29:41
+
+*** Options ***
+
+-MAKEUD=DefaultBuild\Ethernet_test01.lk.ud
+-subcommand=DefaultBuild\Ethernet_test01.clnk
+-library=DefaultBuild\Ethernet_test01.lib
+-input=DefaultBuild\Ethernet_test01.obj
+-input=DefaultBuild\r_cg_hardware_setup.obj
+-input=DefaultBuild\r_smc_cgc.obj
+-input=DefaultBuild\r_smc_cgc_user.obj
+-input=DefaultBuild\r_smc_interrupt.obj
+-input=DefaultBuild\hwsetup.obj
+-input=DefaultBuild\dbsct.obj
+-input=DefaultBuild\lowlvl.obj
+-input=DefaultBuild\lowsrc.obj
+-input=DefaultBuild\mcu_locks.obj
+-input=DefaultBuild\resetprg.obj
+-input=DefaultBuild\r_bsp_common.obj
+-input=DefaultBuild\r_bsp_cpu.obj
+-input=DefaultBuild\r_bsp_interrupts.obj
+-input=DefaultBuild\r_bsp_locking.obj
+-input=DefaultBuild\r_bsp_mcu_startup.obj
+-input=DefaultBuild\r_bsp_software_interrupt.obj
+-input=DefaultBuild\r_rx_intrinsic_functions.obj
+-input=DefaultBuild\sbrk.obj
+-input=DefaultBuild\mcu_clocks.obj
+-input=DefaultBuild\mcu_init.obj
+-input=DefaultBuild\mcu_interrupts.obj
+-input=DefaultBuild\mcu_mapped_interrupts.obj
+-input=DefaultBuild\vecttbl.obj
+-input=DefaultBuild\r_ether_rx.obj
+-input=DefaultBuild\phy.obj
+-input=DefaultBuild\r_ether_setting_rx64m.obj
+-input=DefaultBuild\Pin.obj
+-input=DefaultBuild\r_ether_rx_pinset.obj
+-noprelink
+-output=DefaultBuild\Ethernet_test01.abs
+-vect=_undefined_interrupt_source_isr
+-list=DefaultBuild\Ethernet_test01.map
+-nooptimize
+-start=SU,SI,B_1,R_1,B_2,R_2,B,R/4,C_1,C_2,C,C$*,D*,W*,L,P*/FFC00000,EXCEPTVECT/FFFFFF80,RESETVECT/FFFFFFFC,B_ETHERNET_BUFFERS_1,B_RX_DESC_1,B_TX_DESC_1/10000
+-rom=D=R,D_1=R_1,D_2=R_2
+-nologo
+-end
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+SU
+                                  00000004  00001003      1000   4
+SI
+                                  00001004  00001403       400   4
+B_1
+                                  00001404  00001451        4e   1
+R_1
+                                  00001452  000014a4        53   1
+B_2
+                                  000014a6  000014b1         c   2
+R_2
+                                  000014b2  000014b2         0   1
+B
+                                  000014b4  00001d67       8b4   4
+R
+                                  00001d68  00001e6f       108   4
+B_ETHERNET_BUFFERS_1
+                                  00010000  000117ff      1800   1
+B_RX_DESC_1
+                                  00011800  0001181f        20   1
+B_TX_DESC_1
+                                  00011820  0001183f        20   1
+$ADDR_C_120040
+                                  00120040  00120043         4   1
+$ADDR_C_120048
+                                  00120048  0012004b         4   1
+$ADDR_C_120050
+                                  00120050  0012006f        20   1
+C_1
+                                  ffc00000  ffc000a3        a4   1
+C_2
+                                  ffc000a4  ffc000a9         6   2
+C
+                                  ffc000ac  ffc0012b        80   4
+C$DSEC
+                                  ffc0012c  ffc0014f        24   4
+C$BSEC
+                                  ffc00150  ffc00167        18   4
+C$VECT
+                                  ffc00168  ffc00567       400   4
+D
+                                  ffc00568  ffc0066f       108   4
+D_1
+                                  ffc00670  ffc006c2        53   1
+D_2
+                                  ffc006c3  ffc006c3         0   1
+W
+                                  ffc006c4  ffc006c4         0   4
+W_1
+                                  ffc006c4  ffc006e8        25   1
+W_2
+                                  ffc006ea  ffc006ea         0   2
+L
+                                  ffc006ec  ffc00731        46   4
+P
+                                  ffc00732  ffc037f8      30c7   1
+EXCEPTVECT
+                                  ffffff80  fffffffb        7c   4
+RESETVECT
+                                  fffffffc  ffffffff         4   4

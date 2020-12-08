@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<MicomToolCommonProjectFile Version="1.00">
+  <CreatorType Name="CubeSuite+" Version="V8.03.00  [21 Nov 2019]" />
+  <Placeholders>
+    <PlaceholderPrefix>%</PlaceholderPrefix>
+    <PlaceholderPostfix>%</PlaceholderPostfix>
+  </Placeholders>
+  <Project Name="Ethernet_test01" Type="Application">
+    <Files>
+      <Path>Ethernet_test01.c</Path>
+      <Category Name="Smart Configurator">
+        <Category Name="general">
+          <Path>src\smc_gen\general\r_cg_hardware_setup.c</Path>
+          <Path>src\smc_gen\general\r_cg_macrodriver.h</Path>
+          <Path>src\smc_gen\general\r_cg_userdefine.h</Path>
+          <Path>src\smc_gen\general\r_smc_cgc.c</Path>
+          <Path>src\smc_gen\general\r_smc_cgc.h</Path>
+          <Path>src\smc_gen\general\r_smc_cgc_user.c</Path>
+          <Path>src\smc_gen\general\r_smc_entry.h</Path>
+          <Path>src\smc_gen\general\r_smc_interrupt.c</Path>
+          <Path>src\smc_gen\general\r_smc_interrupt.h</Path>
+        </Category>
+        <Category Name="r_bsp">
+          <Path>src\smc_gen\r_bsp\platform.h</Path>
+          <Path>src\smc_gen\r_bsp\readme.txt</Path>
+          <Category Name="board">
+            <Category Name="generic_rx64m">
+              <Path>src\smc_gen\r_bsp\board\generic_rx64m\hwsetup.c</Path>
+              <Path>src\smc_gen\r_bsp\board\generic_rx64m\hwsetup.h</Path>
+              <Path>src\smc_gen\r_bsp\board\generic_rx64m\r_bsp.h</Path>
+              <Path>src\smc_gen\r_bsp\board\generic_rx64m\r_bsp_config_reference.h</Path>
+              <Path>src\smc_gen\r_bsp\board\generic_rx64m\r_bsp_interrupt_config_reference.h</Path>
+            </Category>
+            <Category Name="user">
+              <Path>src\smc_gen\r_bsp\board\user\r_bsp.h</Path>
+            </Category>
+          </Category>
+          <Category Name="doc">
+            <Category Name="en">
+              <Path>src\smc_gen\r_bsp\doc\en\r01an1685ej0550-rx-bsp.pdf</Path>
+            </Category>
+            <Category Name="ja">
+              <Path>src\smc_gen\r_bsp\doc\ja\r01an1685jj0550-rx-bsp.pdf</Path>
+            </Category>
+          </Category>
+          <Category Name="mcu">
+            <Category Name="all">
+              <Path>src\smc_gen\r_bsp\mcu\all\dbsct.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\lowlvl.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\lowlvl.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\lowsrc.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\lowsrc.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\mcu_locks.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\resetprg.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_common.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_common.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_cpu.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_interrupts.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_interrupts.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_locking.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_mcu_startup.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_mcu_startup.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_software_interrupt.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\r_bsp_software_interrupt.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\r_rtos.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\r_rx_compiler.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\r_rx_intrinsic_functions.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\r_rx_intrinsic_functions.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\r_typedefs.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\sbrk.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\all\sbrk.h</Path>
+            </Category>
+            <Category Name="rx64m">
+              <Path>src\smc_gen\r_bsp\mcu\rx64m\mcu_clocks.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\rx64m\mcu_clocks.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\rx64m\mcu_info.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\rx64m\mcu_init.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\rx64m\mcu_init.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\rx64m\mcu_interrupts.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\rx64m\mcu_interrupts.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\rx64m\mcu_locks.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\rx64m\mcu_mapped_interrupts.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\rx64m\mcu_mapped_interrupts.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\rx64m\mcu_mapped_interrupts_private.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\rx64m\r_bsp_cpu.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\rx64m\r_bsp_locking.h</Path>
+              <Path>src\smc_gen\r_bsp\mcu\rx64m\vecttbl.c</Path>
+              <Path>src\smc_gen\r_bsp\mcu\rx64m\vecttbl.h</Path>
+              <Category Name="register_access">
+                <Category Name="ccrx">
+                  <Path>src\smc_gen\r_bsp\mcu\rx64m\register_access\ccrx\iodefine.h</Path>
+                </Category>
+              </Category>
+            </Category>
+          </Category>
+        </Category>
+        <Category Name="r_config">
+          <Path>src\smc_gen\r_config\r_bsp_config.h</Path>
+          <Path>src\smc_gen\r_config\r_bsp_config_readme.txt</Path>
+          <Path>src\smc_gen\r_config\r_bsp_interrupt_config.h</Path>
+          <Path>src\smc_gen\r_config\r_ether_rx_config.h</Path>
+        </Category>
+        <Category Name="r_ether_rx">
+          <Path>src\smc_gen\r_ether_rx\readme.txt</Path>
+          <Path>src\smc_gen\r_ether_rx\r_ether_rx_if.h</Path>
+          <Category Name="doc">
+            <Category Name="en">
+              <Path>src\smc_gen\r_ether_rx\doc\en\r01an2009ej0120-rx-ether.pdf</Path>
+            </Category>
+            <Category Name="ja">
+              <Path>src\smc_gen\r_ether_rx\doc\ja\r01an2009jj0120-rx-ether.pdf</Path>
+            </Category>
+          </Category>
+          <Category Name="ref">
+            <Path>src\smc_gen\r_ether_rx\ref\r_ether_rx_config_reference.h</Path>
+          </Category>
+          <Category Name="src">
+            <Path>src\smc_gen\r_ether_rx\src\r_ether_rx.c</Path>
+            <Path>src\smc_gen\r_ether_rx\src\r_ether_rx_private.h</Path>
+            <Category Name="phy">
+              <Path>src\smc_gen\r_ether_rx\src\phy\phy.c</Path>
+              <Path>src\smc_gen\r_ether_rx\src\phy\phy.h</Path>
+            </Category>
+            <Category Name="targets">
+              <Category Name="rx64m">
+                <Path>src\smc_gen\r_ether_rx\src\targets\rx64m\r_ether_setting_rx64m.c</Path>
+              </Category>
+            </Category>
+          </Category>
+        </Category>
+        <Category Name="r_pincfg">
+          <Path>src\smc_gen\r_pincfg\Pin.c</Path>
+          <Path>src\smc_gen\r_pincfg\Pin.h</Path>
+          <Path>src\smc_gen\r_pincfg\r_ether_rx_pinset.c</Path>
+          <Path>src\smc_gen\r_pincfg\r_ether_rx_pinset.h</Path>
+          <Path>src\smc_gen\r_pincfg\r_pinset.h</Path>
+        </Category>
+      </Category>
+    </Files>
+    <DebugOptions>
+      <DebugTool>Simulator</DebugTool>
+      <ConnectSettings />
+      <DebugToolSettings />
+    </DebugOptions>
+    <Device Series="RX">R5F564MLCxFC</Device>
+    <BuildOptions Name="CC-RX" Version="V3.02.00">
+      <BuildMode Name="DefaultBuild" Active="True">
+        <GeneralOptions>
+          <SimultaneouslyBuild>false</SimultaneouslyBuild>
+        </GeneralOptions>
+        <CompileOptions>
+          <Option>-isa=rxv2</Option>
+          <Option>-fpu</Option>
+          <Option>-lang=c99</Option>
+          <Option>-include=src\smc_gen\r_pincfg</Option>
+          <Option>-include=src\smc_gen\r_ether_rx\src\phy</Option>
+          <Option>-include=src\smc_gen\r_ether_rx\src</Option>
+          <Option>-include=src\smc_gen\r_ether_rx\ref</Option>
+          <Option>-include=src\smc_gen\r_ether_rx</Option>
+          <Option>-include=src\smc_gen\r_config</Option>
+          <Option>-include=src\smc_gen\r_bsp\mcu\rx64m\register_access\ccrx</Option>
+          <Option>-include=src\smc_gen\r_bsp\mcu\rx64m</Option>
+          <Option>-include=src\smc_gen\r_bsp\mcu\all</Option>
+          <Option>-include=src\smc_gen\r_bsp\board\user</Option>
+          <Option>-include=src\smc_gen\r_bsp\board\generic_rx64m</Option>
+          <Option>-include=src\smc_gen\r_bsp</Option>
+          <Option>-include=src\smc_gen\general</Option>
+          <Option>-output=obj=%BuildModeName%\%FileLeaf%.obj</Option>
+          <Option>-debug</Option>
+          <Option>-g_line</Option>
+          <Option>-nologo</Option>
+        </CompileOptions>
+        <AssembleOptions>
+          <Option>-isa=rxv2</Option>
+          <Option>-fpu</Option>
+          <Option>-output=%BuildModeName%\%FileLeaf%.obj</Option>
+          <Option>-debug</Option>
+          <Option>-nologo</Option>
+        </AssembleOptions>
+        <LinkOptions>
+          <Option>-output=%BuildModeName%\%ProjectName%.abs</Option>
+          <Option>-vect=_undefined_interrupt_source_isr</Option>
+          <Option>-list=%BuildModeName%\%ProjectName%.map</Option>
+          <Option>-nooptimize</Option>
+          <Option>-start=SU,SI,B_1,R_1,B_2,R_2,B,R/4,C_1,C_2,C,C$*,D*,W*,L,P*/FFC00000,EXCEPTVECT/FFFFFF80,RESETVECT/FFFFFFFC,B_ETHERNET_BUFFERS_1,B_RX_DESC_1,B_TX_DESC_1/10000</Option>
+          <Option>-rom=D=R,D_1=R_1,D_2=R_2</Option>
+          <Option>-nologo</Option>
+          <Option>-end</Option>
+          <Option>-input=%BuildModeName%\%ProjectName%.abs</Option>
+          <Option>-output=%BuildModeName%\%ProjectName%.mot</Option>
+          <Option>-form=stype</Option>
+          <Option>-exit</Option>
+          <PreLinker>Auto</PreLinker>
+        </LinkOptions>
+        <LibraryGenerateOptions>
+          <Option>-isa=rxv2</Option>
+          <Option>-fpu</Option>
+          <Option>-lang=c99</Option>
+          <Option>-head=runtime,stdio,stdlib,string,new</Option>
+          <Option>-output=%BuildModeName%\%ProjectName%.lib</Option>
+          <Option>-nologo</Option>
+          <GenerateMode>BuildOptionChanged</GenerateMode>
+        </LibraryGenerateOptions>
+        <LinkOrder>
+          <Path>DefaultBuild\Ethernet_test01.obj</Path>
+          <Path>DefaultBuild\r_cg_hardware_setup.obj</Path>
+          <Path>DefaultBuild\r_smc_cgc.obj</Path>
+          <Path>DefaultBuild\r_smc_cgc_user.obj</Path>
+          <Path>DefaultBuild\r_smc_interrupt.obj</Path>
+          <Path>DefaultBuild\hwsetup.obj</Path>
+          <Path>DefaultBuild\dbsct.obj</Path>
+          <Path>DefaultBuild\lowlvl.obj</Path>
+          <Path>DefaultBuild\lowsrc.obj</Path>
+          <Path>DefaultBuild\mcu_locks.obj</Path>
+          <Path>DefaultBuild\resetprg.obj</Path>
+          <Path>DefaultBuild\r_bsp_common.obj</Path>
+          <Path>DefaultBuild\r_bsp_cpu.obj</Path>
+          <Path>DefaultBuild\r_bsp_interrupts.obj</Path>
+          <Path>DefaultBuild\r_bsp_locking.obj</Path>
+          <Path>DefaultBuild\r_bsp_mcu_startup.obj</Path>
+          <Path>DefaultBuild\r_bsp_software_interrupt.obj</Path>
+          <Path>DefaultBuild\r_rx_intrinsic_functions.obj</Path>
+          <Path>DefaultBuild\sbrk.obj</Path>
+          <Path>DefaultBuild\mcu_clocks.obj</Path>
+          <Path>DefaultBuild\mcu_init.obj</Path>
+          <Path>DefaultBuild\mcu_interrupts.obj</Path>
+          <Path>DefaultBuild\mcu_mapped_interrupts.obj</Path>
+          <Path>DefaultBuild\vecttbl.obj</Path>
+          <Path>DefaultBuild\r_ether_rx.obj</Path>
+          <Path>DefaultBuild\phy.obj</Path>
+          <Path>DefaultBuild\r_ether_setting_rx64m.obj</Path>
+          <Path>DefaultBuild\Pin.obj</Path>
+          <Path>DefaultBuild\r_ether_rx_pinset.obj</Path>
+        </LinkOrder>
+        <CommonOptions>
+          <IncludePathForC>src\smc_gen\r_pincfg</IncludePathForC>
+          <IncludePathForC>src\smc_gen\r_ether_rx\src\phy</IncludePathForC>
+          <IncludePathForC>src\smc_gen\r_ether_rx\src</IncludePathForC>
+          <IncludePathForC>src\smc_gen\r_ether_rx\ref</IncludePathForC>
+          <IncludePathForC>src\smc_gen\r_ether_rx</IncludePathForC>
+          <IncludePathForC>src\smc_gen\r_config</IncludePathForC>
+          <IncludePathForC>src\smc_gen\r_bsp\mcu\rx64m\register_access\ccrx</IncludePathForC>
+          <IncludePathForC>src\smc_gen\r_bsp\mcu\rx64m</IncludePathForC>
+          <IncludePathForC>src\smc_gen\r_bsp\mcu\all</IncludePathForC>
+          <IncludePathForC>src\smc_gen\r_bsp\board\user</IncludePathForC>
+          <IncludePathForC>src\smc_gen\r_bsp\board\generic_rx64m</IncludePathForC>
+          <IncludePathForC>src\smc_gen\r_bsp</IncludePathForC>
+          <IncludePathForC>src\smc_gen\general</IncludePathForC>
+        </CommonOptions>
+      </BuildMode>
+    </BuildOptions>
+    <Extension_SmcCodePart>
+      <CodeGeneratorData></CodeGeneratorData>
+      <GenerateFileFolder>D:\RX64M\LAB\Ethernet\Ethernet_test01</GenerateFileFolder>
+      <SCFGFile>Ethernet_test01.scfg</SCFGFile>
+      <SmcExePath>C:\Program Files (x86)\Renesas Electronics\SmartConfigurator\RX\eclipse\SmartConfigurator.exe</SmcExePath>
+      <CodeGeneratorFilesGuid>eecc5de8-1ffe-4000-85b3-6df6d1acabfb</CodeGeneratorFilesGuid>
+    </Extension_SmcCodePart>
+  </Project>
+</MicomToolCommonProjectFile>
