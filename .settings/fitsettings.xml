@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FITMODULE xmlns:ns2="com.renesas.tools.fitconfigurator.settings.SerializeData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="">
+    <selectedModules>
+        <name>r_bsp</name>
+        <version>3.00</version>
+    </selectedModules>
+    <selectedModules>
+        <name>r_ether_rx</name>
+        <version>1.02</version>
+    </selectedModules>
+    <selectedModules>
+        <name>r_usb_basic</name>
+        <version>1.10</version>
+    </selectedModules>
+    <selectedModules>
+        <name>r_usb_hmsc</name>
+        <version>1.10</version>
+    </selectedModules>
+    <installedModules>r_bsp:2.90</installedModules>
+    <installedModules>r_cmt_rx:2.60</installedModules>
+    <installedModules>r_ether_rx:1.02</installedModules>
+    <installedModules>r_t4_rx:2.02</installedModules>
+    <installedModules>r_t4_dhcp_client_rx:1.03</installedModules>
+    <installedModules>r_usb_basic:1.10</installedModules>
+    <installedModules>r_usb_hmsc:1.10</installedModules>
+    <installedModules>r_t4_dns_client_rx:1.02</installedModules>
+    <installedModules>r_t4_driver_rx:1.02</installedModules>
+    <installedModules>r_t4_file_driver_rx:1.01</installedModules>
+    <installedModules>r_t4_ftp_server_rx:1.03</installedModules>
+    <installedModules>r_t4_http_server_rx:1.04</installedModules>
+    <installedModules>r_tfat_rx:3.02</installedModules>
+    <installedModules>r_tfat_driver_rx:1.02</installedModules>
+    <installedModules>r_bsp:3.00</installedModules>
+</FITMODULE>

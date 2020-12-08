@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<MicomToolCommonProjectFile Version="1.00">
+  <CreatorType Name="CubeSuite+" Version="V8.03.00  [21 Nov 2019]" />
+  <Placeholders>
+    <PlaceholderPrefix>%</PlaceholderPrefix>
+    <PlaceholderPostfix>%</PlaceholderPostfix>
+  </Placeholders>
+  <Project Name="Ethernet-official-1" Type="Application">
+    <Files>
+      <Category Name="project">
+        <Path>lowlvl.src</Path>
+        <Path>stacksct.h</Path>
+        <Path>typedefine.h</Path>
+        <Category Name="r_t4_http_server_rx">
+          <Category Name="doc">
+            <Category Name="en" />
+            <Category Name="ja" />
+          </Category>
+          <Path>r_t4_http_server_rx\readme.txt</Path>
+          <Category Name="ref">
+            <Path>r_t4_http_server_rx\ref\r_t4_http_server_rx_config_reference.h</Path>
+          </Category>
+          <Path>r_t4_http_server_rx\r_t4_http_server_rx_if.h</Path>
+          <Category Name="src">
+            <Path>r_t4_http_server_rx\src\r_http_server.c</Path>
+            <Path>r_t4_http_server_rx\src\r_http_server_config.c</Path>
+            <Path>r_t4_http_server_rx\src\r_http_server_config.h</Path>
+          </Category>
+        </Category>
+        <Category Name="r_t4_rx">
+          <Category Name="doc">
+            <Category Name="en" />
+            <Category Name="ja" />
+          </Category>
+          <Category Name="lib">
+            <Path>r_t4_rx\lib\r_mw_version.h</Path>
+            <Path>r_t4_rx\lib\r_stdint.h</Path>
+            <Path>r_t4_rx\lib\r_t4_itcpip.h</Path>
+            <Path>r_t4_rx\lib\T4_Library_rxv1_ether_little.lib</Path>
+            <Path>r_t4_rx\lib\T4_Library_rxv2_ether_little.lib</Path>
+          </Category>
+          <Category Name="make_lib" />
+          <Path>r_t4_rx\readme.txt</Path>
+          <Category Name="ref">
+            <Path>r_t4_rx\ref\r_t4_rx_config_reference.h</Path>
+          </Category>
+          <Category Name="src">
+            <Path>r_t4_rx\src\config_tcpudp.c</Path>
+          </Category>
+        </Category>
+        <Category Name="r_tfat_driver_rx">
+          <Category Name="doc">
+            <Category Name="en" />
+            <Category Name="ja" />
+          </Category>
+          <Path>r_tfat_driver_rx\readme.txt</Path>
+          <Category Name="ref">
+            <Path>r_tfat_driver_rx\ref\r_tfat_driver_rx_config_reference.h</Path>
+          </Category>
+          <Path>r_tfat_driver_rx\r_tfat_driver_rx_if.h</Path>
+          <Category Name="src">
+            <Category Name="device">
+              <Category Name="sdhi">
+                <Path>r_tfat_driver_rx\src\device\sdhi\r_tfat_drv_if_sdhi.c</Path>
+              </Category>
+              <Category Name="usb">
+                <Path>r_tfat_driver_rx\src\device\usb\r_tfat_drv_if_usb.c</Path>
+              </Category>
+              <Category Name="usb_mini">
+                <Path>r_tfat_driver_rx\src\device\usb_mini\r_tfat_drv_if_usb_mini.c</Path>
+              </Category>
+            </Category>
+            <Path>r_tfat_driver_rx\src\r_tfat_drv_if.c</Path>
+            <Path>r_tfat_driver_rx\src\r_tfat_drv_if_dev.h</Path>
+          </Category>
+        </Category>
+        <Category Name="r_tfat_rx">
+          <Category Name="doc">
+            <Category Name="en" />
+            <Category Name="ja" />
+          </Category>
+          <Category Name="lib">
+            <Path>r_tfat_rx\lib\r_mw_version.h</Path>
+            <Path>r_tfat_rx\lib\r_stdint.h</Path>
+            <Path>r_tfat_rx\lib\tfat_rx200_little.lib</Path>
+            <Path>r_tfat_rx\lib\tfat_rx600_little.lib</Path>
+          </Category>
+          <Path>r_tfat_rx\readme.txt</Path>
+          <Category Name="ref">
+            <Path>r_tfat_rx\ref\r_tfat_rx_config_reference.h</Path>
+          </Category>
+          <Path>r_tfat_rx\r_tfat_lib.h</Path>
+        </Category>
+        <Category Name="r_usb_basic">
+          <Category Name="doc" />
+          <Path>r_usb_basic\readme.txt</Path>
+          <Category Name="ref">
+            <Path>r_usb_basic\ref\r_usb_basic_config_reference.h</Path>
+          </Category>
+          <Path>r_usb_basic\r_usb_basic_if.h</Path>
+          <Category Name="src">
+            <Category Name="driver">
+              <Category Name="comm">
+                <Path>r_usb_basic\src\driver\comm\r_usb_cdataio.c</Path>
+                <Path>r_usb_basic\src\driver\comm\r_usb_cintfifo.c</Path>
+                <Path>r_usb_basic\src\driver\comm\r_usb_cinthandler_usbip0.c</Path>
+                <Path>r_usb_basic\src\driver\comm\r_usb_cinthandler_usbip1.c</Path>
+                <Path>r_usb_basic\src\driver\comm\r_usb_clibusbip.c</Path>
+                <Path>r_usb_basic\src\driver\comm\r_usb_cscheduler.c</Path>
+                <Path>r_usb_basic\src\driver\comm\r_usb_cstdapi.c</Path>
+                <Path>r_usb_basic\src\driver\comm\r_usb_cstdfunction.c</Path>
+              </Category>
+              <Category Name="host">
+                <Path>r_usb_basic\src\driver\host\r_usb_hbc.c</Path>
+                <Path>r_usb_basic\src\driver\host\r_usb_hcontrolrw.c</Path>
+                <Path>r_usb_basic\src\driver\host\r_usb_hdriver.c</Path>
+                <Path>r_usb_basic\src\driver\host\r_usb_hdriverapi.c</Path>
+                <Path>r_usb_basic\src\driver\host\r_usb_hhubsys.c</Path>
+                <Path>r_usb_basic\src\driver\host\r_usb_hintfifo.c</Path>
+                <Path>r_usb_basic\src\driver\host\r_usb_hlibusbip.c</Path>
+                <Path>r_usb_basic\src\driver\host\r_usb_hmanager.c</Path>
+                <Path>r_usb_basic\src\driver\host\r_usb_hsignal.c</Path>
+                <Path>r_usb_basic\src\driver\host\r_usb_hstdfunction.c</Path>
+              </Category>
+              <Category Name="inc">
+                <Path>r_usb_basic\src\driver\inc\r_usb_api.h</Path>
+                <Path>r_usb_basic\src\driver\inc\r_usb_cdefusbip.h</Path>
+                <Path>r_usb_basic\src\driver\inc\r_usb_cextern.h</Path>
+                <Path>r_usb_basic\src\driver\inc\r_usb_ckernelid.h</Path>
+                <Path>r_usb_basic\src\driver\inc\r_usb_cmacprint.h</Path>
+                <Path>r_usb_basic\src\driver\inc\r_usb_cmacsystemcall.h</Path>
+                <Path>r_usb_basic\src\driver\inc\r_usb_ctypedef.h</Path>
+              </Category>
+              <Category Name="peri">
+                <Path>r_usb_basic\src\driver\peri\r_usb_pbc.c</Path>
+                <Path>r_usb_basic\src\driver\peri\r_usb_pcontrolrw.c</Path>
+                <Path>r_usb_basic\src\driver\peri\r_usb_pdriver.c</Path>
+                <Path>r_usb_basic\src\driver\peri\r_usb_pdriverapi.c</Path>
+                <Path>r_usb_basic\src\driver\peri\r_usb_pintfifo.c</Path>
+                <Path>r_usb_basic\src\driver\peri\r_usb_psignal.c</Path>
+                <Path>r_usb_basic\src\driver\peri\r_usb_pstdfunction.c</Path>
+                <Path>r_usb_basic\src\driver\peri\r_usb_pstdrequest.c</Path>
+              </Category>
+            </Category>
+            <Category Name="HW">
+              <Category Name="comm">
+                <Path>r_usb_basic\src\HW\comm\rx_mcu.c</Path>
+                <Path>r_usb_basic\src\HW\comm\r_usb_creg_abs.c</Path>
+                <Path>r_usb_basic\src\HW\comm\r_usb_creg_access.c</Path>
+                <Path>r_usb_basic\src\HW\comm\r_usb_creg_dmadtc.c</Path>
+              </Category>
+              <Category Name="host">
+                <Path>r_usb_basic\src\HW\host\r_usb_hostelectrical.c</Path>
+                <Path>r_usb_basic\src\HW\host\r_usb_hreg_abs.c</Path>
+                <Path>r_usb_basic\src\HW\host\r_usb_hreg_access.c</Path>
+              </Category>
+              <Category Name="inc">
+                <Path>r_usb_basic\src\HW\inc\rx_rsk_extern.h</Path>
+                <Path>r_usb_basic\src\HW\inc\r_usb_cusb_bitdefine.h</Path>
+                <Path>r_usb_basic\src\HW\inc\r_usb_defvalue.h</Path>
+                <Path>r_usb_basic\src\HW\inc\r_usb_fixed_config.h</Path>
+                <Path>r_usb_basic\src\HW\inc\r_usb_reg_access.h</Path>
+                <Path>r_usb_basic\src\HW\inc\r_usb_sysdef.h</Path>
+              </Category>
+              <Category Name="peri">
+                <Path>r_usb_basic\src\HW\peri\r_usb_preg_abs.c</Path>
+                <Path>r_usb_basic\src\HW\peri\r_usb_preg_access.c</Path>
+              </Category>
+              <Path>r_usb_basic\src\HW\RX64M.txt</Path>
+            </Category>
+          </Category>
+        </Category>
+        <Category Name="r_usb_hmsc">
+          <Category Name="doc" />
+          <Path>r_usb_hmsc\readme.txt</Path>
+          <Category Name="ref">
+            <Path>r_usb_hmsc\ref\r_usb_hmsc_config_reference.h</Path>
+          </Category>
+          <Path>r_usb_hmsc\r_usb_hmsc_if.h</Path>
+          <Category Name="src">
+            <Category Name="inc">
+              <Path>r_usb_hmsc\src\inc\r_usb_hatapi_define.h</Path>
+              <Path>r_usb_hmsc\src\inc\r_usb_hmsc_api.h</Path>
+              <Path>r_usb_hmsc\src\inc\r_usb_hmsc_define.h</Path>
+              <Path>r_usb_hmsc\src\inc\r_usb_hmsc_extern.h</Path>
+            </Category>
+            <Path>r_usb_hmsc\src\r_usb_hmsc_api.c</Path>
+            <Path>r_usb_hmsc\src\r_usb_hmsc_ddi.c</Path>
+            <Path>r_usb_hmsc\src\r_usb_hmsc_driver.c</Path>
+            <Path>r_usb_hmsc\src\r_usb_hmsc_hci.c</Path>
+            <Path>r_usb_hmsc\src\r_usb_hstorage_driver.c</Path>
+            <Path>r_usb_hmsc\src\r_usb_hstorage_driver_api.c</Path>
+          </Category>
+        </Category>
+        <Category Name="src">
+          <Category Name="contents" />
+          <Path>src\led.c</Path>
+          <Path>src\led.h</Path>
+          <Path>src\main.c</Path>
+          <Path>src\r_http_server_cgi_sample.c</Path>
+          <Path>src\r_sys_time.c</Path>
+          <Path>src\r_sys_time.h</Path>
+          <Path>src\r_usb_hmsc_apl.c</Path>
+          <Path>src\r_usb_hmsc_apl.h</Path>
+        </Category>
+        <Category Name="r_bsp">
+          <Category Name="board">
+            <Category Name="rskrx64m">
+              <Path>r_bsp\board\rskrx64m\dbsct.c</Path>
+              <Path>r_bsp\board\rskrx64m\hwsetup.c</Path>
+              <Path>r_bsp\board\rskrx64m\hwsetup.h</Path>
+              <Path>r_bsp\board\rskrx64m\lowlvl.c</Path>
+              <Path>r_bsp\board\rskrx64m\lowsrc.c</Path>
+              <Path>r_bsp\board\rskrx64m\lowsrc.h</Path>
+              <Path>r_bsp\board\rskrx64m\resetprg.c</Path>
+              <Path>r_bsp\board\rskrx64m\rskrx64m.h</Path>
+              <Path>r_bsp\board\rskrx64m\r_bsp.h</Path>
+              <Path>r_bsp\board\rskrx64m\r_bsp_config_reference.h</Path>
+              <Path>r_bsp\board\rskrx64m\r_bsp_interrupt_config_reference.h</Path>
+              <Path>r_bsp\board\rskrx64m\sbrk.c</Path>
+              <Path>r_bsp\board\rskrx64m\vecttbl.c</Path>
+              <Path>r_bsp\board\rskrx64m\vecttbl.h</Path>
+            </Category>
+            <Category Name="user">
+              <Path>r_bsp\board\user\r_bsp.h</Path>
+            </Category>
+          </Category>
+          <Category Name="doc" />
+          <Category Name="mcu">
+            <Category Name="all">
+              <Path>r_bsp\mcu\all\r_bsp_common.c</Path>
+              <Path>r_bsp\mcu\all\r_bsp_common.h</Path>
+              <Path>r_bsp\mcu\all\r_typedefs.h</Path>
+            </Category>
+            <Category Name="rx64m">
+              <Path>r_bsp\mcu\rx64m\cpu.c</Path>
+              <Path>r_bsp\mcu\rx64m\cpu.h</Path>
+              <Path>r_bsp\mcu\rx64m\locking.c</Path>
+              <Path>r_bsp\mcu\rx64m\locking.h</Path>
+              <Path>r_bsp\mcu\rx64m\mcu_clocks.c</Path>
+              <Path>r_bsp\mcu\rx64m\mcu_info.h</Path>
+              <Path>r_bsp\mcu\rx64m\mcu_init.c</Path>
+              <Path>r_bsp\mcu\rx64m\mcu_init.h</Path>
+              <Path>r_bsp\mcu\rx64m\mcu_interrupts.c</Path>
+              <Path>r_bsp\mcu\rx64m\mcu_interrupts.h</Path>
+              <Path>r_bsp\mcu\rx64m\mcu_locks.c</Path>
+              <Path>r_bsp\mcu\rx64m\mcu_locks.h</Path>
+              <Path>r_bsp\mcu\rx64m\mcu_mapped_interrupts.c</Path>
+              <Path>r_bsp\mcu\rx64m\mcu_mapped_interrupts.h</Path>
+              <Path>r_bsp\mcu\rx64m\mcu_mapped_interrupts_private.h</Path>
+              <Category Name="register_access">
+                <Path>r_bsp\mcu\rx64m\register_access\iodefine.h</Path>
+              </Category>
+            </Category>
+          </Category>
+          <Path>r_bsp\platform.h</Path>
+          <Path>r_bsp\readme.txt</Path>
+        </Category>
+        <Category Name="r_cmt_rx">
+          <Category Name="doc" />
+          <Path>r_cmt_rx\readme.txt</Path>
+          <Category Name="ref">
+            <Path>r_cmt_rx\ref\r_cmt_rx_config_reference.h</Path>
+          </Category>
+          <Path>r_cmt_rx\r_cmt_rx_if.h</Path>
+          <Category Name="src">
+            <Path>r_cmt_rx\src\r_cmt_rx.c</Path>
+          </Category>
+        </Category>
+        <Category Name="r_config">
+          <Path>r_config\r_bsp_config.h</Path>
+          <Path>r_config\r_bsp_config_readme.txt</Path>
+          <Path>r_config\r_bsp_interrupt_config.h</Path>
+          <Path>r_config\r_cmt_rx_config.h</Path>
+          <Path>r_config\r_ether_rx_config.h</Path>
+          <Path>r_config\r_t4_dhcp_client_rx_config.h</Path>
+          <Path>r_config\r_t4_dns_client_rx_config.h</Path>
+          <Path>r_config\r_t4_driver_rx_config.h</Path>
+          <Path>r_config\r_t4_file_driver_rx_config.h</Path>
+          <Path>r_config\r_t4_ftp_server_rx_config.h</Path>
+          <Path>r_config\r_t4_http_server_rx_config.h</Path>
+          <Path>r_config\r_t4_rx_config.h</Path>
+          <Path>r_config\r_tfat_driver_rx_config.h</Path>
+          <Path>r_config\r_tfat_rx_config.h</Path>
+          <Path>r_config\r_usb_basic_config.h</Path>
+          <Path>r_config\r_usb_hmsc_config.h</Path>
+        </Category>
+        <Category Name="r_ether_rx">
+          <Category Name="doc" />
+          <Path>r_ether_rx\readme.txt</Path>
+          <Category Name="ref">
+            <Path>r_ether_rx\ref\r_ether_rx_config_reference.h</Path>
+          </Category>
+          <Path>r_ether_rx\r_ether_rx_if.h</Path>
+          <Category Name="src">
+            <Category Name="phy">
+              <Path>r_ether_rx\src\phy\phy.c</Path>
+              <Path>r_ether_rx\src\phy\phy.h</Path>
+            </Category>
+            <Path>r_ether_rx\src\r_ether_rx.c</Path>
+            <Path>r_ether_rx\src\r_ether_rx_private.h</Path>
+            <Category Name="targets">
+              <Category Name="rx">
+                <Path>r_ether_rx\src\targets\rx\r_ether_setting_rx.c</Path>
+              </Category>
+            </Category>
+          </Category>
+        </Category>
+        <Category Name="r_t4_dhcp_client_rx">
+          <Category Name="doc">
+            <Category Name="en" />
+            <Category Name="ja" />
+          </Category>
+          <Path>r_t4_dhcp_client_rx\readme.txt</Path>
+          <Category Name="ref">
+            <Path>r_t4_dhcp_client_rx\ref\r_t4_dhcp_client_rx_config_reference.h</Path>
+          </Category>
+          <Path>r_t4_dhcp_client_rx\r_t4_dhcp_client_rx_if.h</Path>
+          <Category Name="src">
+            <Path>r_t4_dhcp_client_rx\src\r_dhcp_client.c</Path>
+            <Path>r_t4_dhcp_client_rx\src\r_dhcp_client.h</Path>
+          </Category>
+        </Category>
+        <Category Name="r_t4_dns_client_rx">
+          <Category Name="doc">
+            <Category Name="en" />
+            <Category Name="ja" />
+          </Category>
+          <Path>r_t4_dns_client_rx\readme.txt</Path>
+          <Category Name="ref">
+            <Path>r_t4_dns_client_rx\ref\r_t4_dns_client_rx_config_reference.h</Path>
+          </Category>
+          <Path>r_t4_dns_client_rx\r_t4_dns_client_rx_if.h</Path>
+          <Category Name="src">
+            <Path>r_t4_dns_client_rx\src\r_dns_client.c</Path>
+            <Path>r_t4_dns_client_rx\src\r_dns_client.h</Path>
+          </Category>
+        </Category>
+        <Category Name="r_t4_driver_rx">
+          <Category Name="doc">
+            <Category Name="en" />
+            <Category Name="ja" />
+          </Category>
+          <Path>r_t4_driver_rx\readme.txt</Path>
+          <Category Name="ref">
+            <Path>r_t4_driver_rx\ref\r_t4_driver_rx_config_reference.h</Path>
+          </Category>
+          <Category Name="src">
+            <Path>r_t4_driver_rx\src\ether_callback.c</Path>
+            <Path>r_t4_driver_rx\src\t4_driver.c</Path>
+            <Path>r_t4_driver_rx\src\timer.c</Path>
+            <Path>r_t4_driver_rx\src\timer.h</Path>
+          </Category>
+        </Category>
+        <Category Name="r_t4_file_driver_rx">
+          <Category Name="doc">
+            <Category Name="en" />
+            <Category Name="ja" />
+          </Category>
+          <Path>r_t4_file_driver_rx\readme.txt</Path>
+          <Category Name="ref">
+            <Path>r_t4_file_driver_rx\ref\r_t4_file_driver_rx_config_reference.h</Path>
+          </Category>
+          <Path>r_t4_file_driver_rx\r_t4_file_driver_rx_if.h</Path>
+          <Category Name="src">
+            <Path>r_t4_file_driver_rx\src\r_file_driver.c</Path>
+            <Path>r_t4_file_driver_rx\src\r_file_driver.h</Path>
+            <Category Name="use_external_mem">
+              <Path>r_t4_file_driver_rx\src\use_external_mem\r_file_driver_external.c</Path>
+            </Category>
+            <Category Name="use_internal_mem">
+              <Path>r_t4_file_driver_rx\src\use_internal_mem\r_file_driver_internal.c</Path>
+            </Category>
+          </Category>
+        </Category>
+        <Category Name="r_t4_ftp_server_rx">
+          <Category Name="doc">
+            <Category Name="en" />
+            <Category Name="ja" />
+          </Category>
+          <Path>r_t4_ftp_server_rx\readme.txt</Path>
+          <Category Name="ref">
+            <Path>r_t4_ftp_server_rx\ref\r_t4_ftp_server_rx_config_reference.h</Path>
+          </Category>
+          <Path>r_t4_ftp_server_rx\r_t4_ftp_server_rx_if.h</Path>
+          <Category Name="src">
+            <Path>r_t4_ftp_server_rx\src\r_ftp_server.c</Path>
+          </Category>
+        </Category>
+      </Category>
+    </Files>
+    <DebugOptions>
+      <ConnectSettings>
+        <MainClock>24000000</MainClock>
+      </ConnectSettings>
+      <DebugToolSettings />
+    </DebugOptions>
+    <Device Series="RX">R5F564MLCxFC</Device>
+    <BuildOptions Name="CC-RX" Version="V3.02.00">
+      <BuildMode Name="DefaultBuild" Active="True">
+        <GeneralOptions>
+          <SimultaneouslyBuild>false</SimultaneouslyBuild>
+        </GeneralOptions>
+        <CompileOptions>
+          <Option>-isa=rxv2</Option>
+          <Option>-fpu</Option>
+          <Option>-lang=c99</Option>
+          <Option>-include=r_t4_ftp_server_rx\ref</Option>
+          <Option>-include=r_t4_ftp_server_rx</Option>
+          <Option>-include=r_t4_file_driver_rx\src</Option>
+          <Option>-include=r_t4_file_driver_rx\ref</Option>
+          <Option>-include=r_t4_file_driver_rx</Option>
+          <Option>-include=r_t4_driver_rx\src</Option>
+          <Option>-include=r_t4_driver_rx\ref</Option>
+          <Option>-include=r_t4_dns_client_rx\src</Option>
+          <Option>-include=r_t4_dns_client_rx\ref</Option>
+          <Option>-include=r_t4_dns_client_rx</Option>
+          <Option>-include=r_t4_dhcp_client_rx\src</Option>
+          <Option>-include=r_t4_dhcp_client_rx\ref</Option>
+          <Option>-include=r_t4_dhcp_client_rx</Option>
+          <Option>-include=r_ether_rx\src\phy</Option>
+          <Option>-include=r_ether_rx\src</Option>
+          <Option>-include=r_ether_rx\ref</Option>
+          <Option>-include=r_ether_rx</Option>
+          <Option>-include=r_config</Option>
+          <Option>-include=r_cmt_rx\ref</Option>
+          <Option>-include=r_cmt_rx</Option>
+          <Option>-include=r_bsp\mcu\rx64m\register_access</Option>
+          <Option>-include=r_bsp\mcu\rx64m</Option>
+          <Option>-include=r_bsp\mcu\all</Option>
+          <Option>-include=r_bsp\board\user</Option>
+          <Option>-include=r_bsp\board\rskrx64m</Option>
+          <Option>-include=r_bsp</Option>
+          <Option>-include=src</Option>
+          <Option>-include=r_usb_hmsc\src\inc</Option>
+          <Option>-include=r_usb_hmsc\ref</Option>
+          <Option>-include=r_usb_hmsc</Option>
+          <Option>-include=r_usb_basic\src\HW\inc</Option>
+          <Option>-include=r_usb_basic\src\driver\inc</Option>
+          <Option>-include=r_usb_basic\ref</Option>
+          <Option>-include=r_usb_basic</Option>
+          <Option>-include=r_tfat_rx\ref</Option>
+          <Option>-include=r_tfat_rx\lib</Option>
+          <Option>-include=r_tfat_rx</Option>
+          <Option>-include=r_tfat_driver_rx\src</Option>
+          <Option>-include=r_tfat_driver_rx\ref</Option>
+          <Option>-include=r_tfat_driver_rx</Option>
+          <Option>-include=r_t4_rx\ref</Option>
+          <Option>-include=r_t4_rx\lib</Option>
+          <Option>-include=r_t4_http_server_rx\src</Option>
+          <Option>-include=r_t4_http_server_rx\ref</Option>
+          <Option>-include=r_t4_http_server_rx</Option>
+          <Option>-include=.</Option>
+          <Option>-output=obj=%BuildModeName%\%FileLeaf%.obj</Option>
+          <Option>-debug</Option>
+          <Option>-g_line</Option>
+          <Option>-nologo</Option>
+        </CompileOptions>
+        <AssembleOptions>
+          <Option>-isa=rxv2</Option>
+          <Option>-fpu</Option>
+          <Option>-output=%BuildModeName%\%FileLeaf%.obj</Option>
+          <Option>-debug</Option>
+          <Option>-nologo</Option>
+        </AssembleOptions>
+        <LinkOptions>
+          <Option>-library=r_t4_rx\lib\T4_Library_rxv1_ether_little.lib</Option>
+          <Option>-library=r_t4_rx\lib\T4_Library_rxv2_ether_little.lib</Option>
+          <Option>-output=%BuildModeName%\%ProjectName%.abs</Option>
+          <Option>-list=%BuildModeName%\%ProjectName%.map</Option>
+          <Option>-nooptimize</Option>
+          <Option>-start=SI,SU,B_1,R_1,B_2,R_2,B,R/00000020,B_ETHERNET_BUFFERS_1,B_RX_DESC_1,B_TX_DESC_1/00030000,PResetPRG/0FFC00000,C_1,C_2,C,C$DSEC,C$BSEC,C$INIT,C$VTBL,C$VECT,D_1,D_2,D,P,PIntPRG,W_1,W_2,W,L/0FFC00100,EXCEPTVECT/0FFFFFF80,RESETVECT/0FFFFFFFC</Option>
+          <Option>-rom=D=R,D_1=R_1,D_2=R_2</Option>
+          <Option>-nologo</Option>
+          <Option>-end</Option>
+          <Option>-input=%BuildModeName%\%ProjectName%.abs</Option>
+          <Option>-output=%BuildModeName%\%ProjectName%.mot</Option>
+          <Option>-form=stype</Option>
+          <Option>-exit</Option>
+          <PreLinker>Auto</PreLinker>
+        </LinkOptions>
+        <LibraryGenerateOptions>
+          <Option>-isa=rxv2</Option>
+          <Option>-fpu</Option>
+          <Option>-lang=c99</Option>
+          <Option>-head=runtime,stdio,stdlib,string,new</Option>
+          <Option>-output=%BuildModeName%\%ProjectName%.lib</Option>
+          <Option>-nologo</Option>
+          <GenerateMode>BuildOptionChanged</GenerateMode>
+        </LibraryGenerateOptions>
+        <LinkOrder>
+          <Path>DefaultBuild\lowlvl.obj</Path>
+          <Path>DefaultBuild\r_http_server.obj</Path>
+          <Path>DefaultBuild\r_http_server_config.obj</Path>
+          <Path>DefaultBuild\config_tcpudp.obj</Path>
+          <Path>DefaultBuild\r_tfat_drv_if.obj</Path>
+          <Path>DefaultBuild\r_tfat_drv_if_sdhi.obj</Path>
+          <Path>DefaultBuild\r_tfat_drv_if_usb.obj</Path>
+          <Path>DefaultBuild\r_tfat_drv_if_usb_mini.obj</Path>
+          <Path>DefaultBuild\r_usb_cdataio.obj</Path>
+          <Path>DefaultBuild\r_usb_cintfifo.obj</Path>
+          <Path>DefaultBuild\r_usb_cinthandler_usbip0.obj</Path>
+          <Path>DefaultBuild\r_usb_cinthandler_usbip1.obj</Path>
+          <Path>DefaultBuild\r_usb_clibusbip.obj</Path>
+          <Path>DefaultBuild\r_usb_cscheduler.obj</Path>
+          <Path>DefaultBuild\r_usb_cstdapi.obj</Path>
+          <Path>DefaultBuild\r_usb_cstdfunction.obj</Path>
+          <Path>DefaultBuild\r_usb_hbc.obj</Path>
+          <Path>DefaultBuild\r_usb_hcontrolrw.obj</Path>
+          <Path>DefaultBuild\r_usb_hdriver.obj</Path>
+          <Path>DefaultBuild\r_usb_hdriverapi.obj</Path>
+          <Path>DefaultBuild\r_usb_hhubsys.obj</Path>
+          <Path>DefaultBuild\r_usb_hintfifo.obj</Path>
+          <Path>DefaultBuild\r_usb_hlibusbip.obj</Path>
+          <Path>DefaultBuild\r_usb_hmanager.obj</Path>
+          <Path>DefaultBuild\r_usb_hsignal.obj</Path>
+          <Path>DefaultBuild\r_usb_hstdfunction.obj</Path>
+          <Path>DefaultBuild\r_usb_pbc.obj</Path>
+          <Path>DefaultBuild\r_usb_pcontrolrw.obj</Path>
+          <Path>DefaultBuild\r_usb_pdriver.obj</Path>
+          <Path>DefaultBuild\r_usb_pdriverapi.obj</Path>
+          <Path>DefaultBuild\r_usb_pintfifo.obj</Path>
+          <Path>DefaultBuild\r_usb_psignal.obj</Path>
+          <Path>DefaultBuild\r_usb_pstdfunction.obj</Path>
+          <Path>DefaultBuild\r_usb_pstdrequest.obj</Path>
+          <Path>DefaultBuild\rx_mcu.obj</Path>
+          <Path>DefaultBuild\r_usb_creg_abs.obj</Path>
+          <Path>DefaultBuild\r_usb_creg_access.obj</Path>
+          <Path>DefaultBuild\r_usb_creg_dmadtc.obj</Path>
+          <Path>DefaultBuild\r_usb_hostelectrical.obj</Path>
+          <Path>DefaultBuild\r_usb_hreg_abs.obj</Path>
+          <Path>DefaultBuild\r_usb_hreg_access.obj</Path>
+          <Path>DefaultBuild\r_usb_preg_abs.obj</Path>
+          <Path>DefaultBuild\r_usb_preg_access.obj</Path>
+          <Path>DefaultBuild\r_usb_hmsc_api.obj</Path>
+          <Path>DefaultBuild\r_usb_hmsc_ddi.obj</Path>
+          <Path>DefaultBuild\r_usb_hmsc_driver.obj</Path>
+          <Path>DefaultBuild\r_usb_hmsc_hci.obj</Path>
+          <Path>DefaultBuild\r_usb_hstorage_driver.obj</Path>
+          <Path>DefaultBuild\r_usb_hstorage_driver_api.obj</Path>
+          <Path>DefaultBuild\led.obj</Path>
+          <Path>DefaultBuild\main.obj</Path>
+          <Path>DefaultBuild\r_http_server_cgi_sample.obj</Path>
+          <Path>DefaultBuild\r_sys_time.obj</Path>
+          <Path>DefaultBuild\r_usb_hmsc_apl.obj</Path>
+          <Path>DefaultBuild\dbsct.obj</Path>
+          <Path>DefaultBuild\hwsetup.obj</Path>
+          <Path>DefaultBuild\lowlvl.obj</Path>
+          <Path>DefaultBuild\lowsrc.obj</Path>
+          <Path>DefaultBuild\resetprg.obj</Path>
+          <Path>DefaultBuild\sbrk.obj</Path>
+          <Path>DefaultBuild\vecttbl.obj</Path>
+          <Path>DefaultBuild\r_bsp_common.obj</Path>
+          <Path>DefaultBuild\cpu.obj</Path>
+          <Path>DefaultBuild\locking.obj</Path>
+          <Path>DefaultBuild\mcu_clocks.obj</Path>
+          <Path>DefaultBuild\mcu_init.obj</Path>
+          <Path>DefaultBuild\mcu_interrupts.obj</Path>
+          <Path>DefaultBuild\mcu_locks.obj</Path>
+          <Path>DefaultBuild\mcu_mapped_interrupts.obj</Path>
+          <Path>DefaultBuild\r_cmt_rx.obj</Path>
+          <Path>DefaultBuild\r_ether_rx.obj</Path>
+          <Path>DefaultBuild\phy.obj</Path>
+          <Path>DefaultBuild\r_ether_setting_rx.obj</Path>
+          <Path>DefaultBuild\r_dhcp_client.obj</Path>
+          <Path>DefaultBuild\r_dns_client.obj</Path>
+          <Path>DefaultBuild\ether_callback.obj</Path>
+          <Path>DefaultBuild\t4_driver.obj</Path>
+          <Path>DefaultBuild\timer.obj</Path>
+          <Path>DefaultBuild\r_file_driver.obj</Path>
+          <Path>DefaultBuild\r_file_driver_external.obj</Path>
+          <Path>DefaultBuild\r_file_driver_internal.obj</Path>
+          <Path>DefaultBuild\r_ftp_server.obj</Path>
+          <Path>r_t4_rx\lib\T4_Library_rxv1_ether_little.lib</Path>
+          <Path>r_t4_rx\lib\T4_Library_rxv2_ether_little.lib</Path>
+          <Path>r_tfat_rx\lib\tfat_rx200_little.lib</Path>
+          <Path>r_tfat_rx\lib\tfat_rx600_little.lib</Path>
+        </LinkOrder>
+        <CommonOptions>
+          <IncludePathForC>r_t4_ftp_server_rx\ref</IncludePathForC>
+          <IncludePathForC>r_t4_ftp_server_rx</IncludePathForC>
+          <IncludePathForC>r_t4_file_driver_rx\src</IncludePathForC>
+          <IncludePathForC>r_t4_file_driver_rx\ref</IncludePathForC>
+          <IncludePathForC>r_t4_file_driver_rx</IncludePathForC>
+          <IncludePathForC>r_t4_driver_rx\src</IncludePathForC>
+          <IncludePathForC>r_t4_driver_rx\ref</IncludePathForC>
+          <IncludePathForC>r_t4_dns_client_rx\src</IncludePathForC>
+          <IncludePathForC>r_t4_dns_client_rx\ref</IncludePathForC>
+          <IncludePathForC>r_t4_dns_client_rx</IncludePathForC>
+          <IncludePathForC>r_t4_dhcp_client_rx\src</IncludePathForC>
+          <IncludePathForC>r_t4_dhcp_client_rx\ref</IncludePathForC>
+          <IncludePathForC>r_t4_dhcp_client_rx</IncludePathForC>
+          <IncludePathForC>r_ether_rx\src\phy</IncludePathForC>
+          <IncludePathForC>r_ether_rx\src</IncludePathForC>
+          <IncludePathForC>r_ether_rx\ref</IncludePathForC>
+          <IncludePathForC>r_ether_rx</IncludePathForC>
+          <IncludePathForC>r_config</IncludePathForC>
+          <IncludePathForC>r_cmt_rx\ref</IncludePathForC>
+          <IncludePathForC>r_cmt_rx</IncludePathForC>
+          <IncludePathForC>r_bsp\mcu\rx64m\register_access</IncludePathForC>
+          <IncludePathForC>r_bsp\mcu\rx64m</IncludePathForC>
+          <IncludePathForC>r_bsp\mcu\all</IncludePathForC>
+          <IncludePathForC>r_bsp\board\user</IncludePathForC>
+          <IncludePathForC>r_bsp\board\rskrx64m</IncludePathForC>
+          <IncludePathForC>r_bsp</IncludePathForC>
+          <IncludePathForC>src</IncludePathForC>
+          <IncludePathForC>r_usb_hmsc\src\inc</IncludePathForC>
+          <IncludePathForC>r_usb_hmsc\ref</IncludePathForC>
+          <IncludePathForC>r_usb_hmsc</IncludePathForC>
+          <IncludePathForC>r_usb_basic\src\HW\inc</IncludePathForC>
+          <IncludePathForC>r_usb_basic\src\driver\inc</IncludePathForC>
+          <IncludePathForC>r_usb_basic\ref</IncludePathForC>
+          <IncludePathForC>r_usb_basic</IncludePathForC>
+          <IncludePathForC>r_tfat_rx\ref</IncludePathForC>
+          <IncludePathForC>r_tfat_rx\lib</IncludePathForC>
+          <IncludePathForC>r_tfat_rx</IncludePathForC>
+          <IncludePathForC>r_tfat_driver_rx\src</IncludePathForC>
+          <IncludePathForC>r_tfat_driver_rx\ref</IncludePathForC>
+          <IncludePathForC>r_tfat_driver_rx</IncludePathForC>
+          <IncludePathForC>r_t4_rx\ref</IncludePathForC>
+          <IncludePathForC>r_t4_rx\lib</IncludePathForC>
+          <IncludePathForC>r_t4_http_server_rx\src</IncludePathForC>
+          <IncludePathForC>r_t4_http_server_rx\ref</IncludePathForC>
+          <IncludePathForC>r_t4_http_server_rx</IncludePathForC>
+          <IncludePathForC>.</IncludePathForC>
+        </CommonOptions>
+      </BuildMode>
+    </BuildOptions>
+    <Extension_SmcCodePart>
+      <CodeGeneratorData></CodeGeneratorData>
+      <GenerateFileFolder>D:\RX64M\LAB\Ethernet\Ethernet-official-1</GenerateFileFolder>
+      <SCFGFile>Ethernet-official-1.scfg</SCFGFile>
+      <SmcExePath>C:\Program Files (x86)\Renesas Electronics\SmartConfigurator\RX\eclipse\SmartConfigurator.exe</SmcExePath>
+      <CodeGeneratorFilesGuid>06fe94b0-4cc3-4ee0-af05-00d1a881099c</CodeGeneratorFilesGuid>
+    </Extension_SmcCodePart>
+  </Project>
+</MicomToolCommonProjectFile>
