@@ -1,0 +1,522 @@
+Renesas Optimizing Linker (W3.02.00 )             09-Dec-2020 18:22:40
+
+*** Options ***
+
+-MAKEUD=DefaultBuild\EthernetMigrate2.lk.ud
+-subcommand=DefaultBuild\EthernetMigrate2.clnk
+-library=DefaultBuild\EthernetMigrate2.lib
+-input=DefaultBuild\EthernetMigrate2.obj
+-input=DefaultBuild\r_cg_hardware_setup.obj
+-input=DefaultBuild\r_smc_cgc.obj
+-input=DefaultBuild\r_smc_cgc_user.obj
+-input=DefaultBuild\r_smc_interrupt.obj
+-input=DefaultBuild\hwsetup.obj
+-input=DefaultBuild\dbsct.obj
+-input=DefaultBuild\lowlvl.obj
+-input=DefaultBuild\lowsrc.obj
+-input=DefaultBuild\mcu_locks.obj
+-input=DefaultBuild\resetprg.obj
+-input=DefaultBuild\r_bsp_common.obj
+-input=DefaultBuild\r_bsp_cpu.obj
+-input=DefaultBuild\r_bsp_interrupts.obj
+-input=DefaultBuild\r_bsp_locking.obj
+-input=DefaultBuild\r_bsp_mcu_startup.obj
+-input=DefaultBuild\r_bsp_software_interrupt.obj
+-input=DefaultBuild\r_rx_intrinsic_functions.obj
+-input=DefaultBuild\sbrk.obj
+-input=DefaultBuild\mcu_clocks.obj
+-input=DefaultBuild\mcu_init.obj
+-input=DefaultBuild\mcu_interrupts.obj
+-input=DefaultBuild\mcu_mapped_interrupts.obj
+-input=DefaultBuild\vecttbl.obj
+-input=DefaultBuild\Pin.obj
+-input=DefaultBuild\ether_callback.obj
+-input=DefaultBuild\t4_driver.obj
+-input=DefaultBuild\timer.obj
+-input=DefaultBuild\config_tcpudp.obj
+-input=DefaultBuild\r_cmt_rx.obj
+-input=DefaultBuild\r_ether_rx.obj
+-input=DefaultBuild\phy.obj
+-input=DefaultBuild\r_ether_setting_rx.obj
+-input=DefaultBuild\r_dhcp_client.obj
+-input=DefaultBuild\r_dns_client.obj
+-library=src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib
+-library=src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib
+-library=src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib
+-library=src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib
+-library=src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib
+-library=src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib
+-noprelink
+-output=DefaultBuild\EthernetMigrate2.abs
+-vect=_undefined_interrupt_source_isr
+-list=DefaultBuild\EthernetMigrate2.map
+-nooptimize
+-start=SI,SU,B_1,R_1,B_2,R_2,B,R/00000020,B_ETHERNET_BUFFERS_1,B_RX_DESC_1,B_TX_DESC_1/00030000,PResetPRG/0FFC00000,C_1,C_2,C,C$DSEC,C$BSEC,C$INIT,C$VTBL,C$VECT,D_1,D_2,D,P,PIntPRG,W_1,W_2,W,L/0FFC00100,EXCEPTVECT/0FFFFFF80,RESETVECT/0FFFFFFFC
+-rom=D=R,D_1=R_1,D_2=R_2
+-nologo
+-end
+
+*** Error information ***
+
+W0561010:Duplicate file specified in option "library" : "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib"
+W0561010:Duplicate file specified in option "library" : "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib"
+W0561320:Duplicate symbol "__ether_proc_rcv" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_proc_rcv" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_rcv_arp" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_rcv_arp" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_resolve" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_resolve" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_snd_arp" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_snd_arp" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_snd_ip" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_snd_ip" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_snd" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_snd" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_add" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_add" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_del" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_del" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_init" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_init" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_p_rcv_buff" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_p_rcv_buff" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ip_rcv_hdr" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ip)"
+W0561320:Duplicate symbol "__ip_rcv_hdr" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ip)"
+W0561320:Duplicate symbol "__ip_snd" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ip)"
+W0561320:Duplicate symbol "__ip_snd" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ip)"
+W0561320:Duplicate symbol "__ip_snd_icmp" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ip)"
+W0561320:Duplicate symbol "__ip_snd_icmp" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ip)"
+W0561320:Duplicate symbol "__ip_check_ipadd_proto" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ip)"
+W0561320:Duplicate symbol "__ip_check_ipadd_proto" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ip)"
+W0561320:Duplicate symbol "__ip_check_multicast" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ip)"
+W0561320:Duplicate symbol "__ip_check_multicast" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ip)"
+W0561320:Duplicate symbol "__ip_check_broadcast" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ip)"
+W0561320:Duplicate symbol "__ip_check_broadcast" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ip)"
+W0561320:Duplicate symbol "_data_link_buf_ptr" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ip)"
+W0561320:Duplicate symbol "_data_link_buf_ptr" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ip)"
+W0561320:Duplicate symbol "__ch_info_tbl" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ip)"
+W0561320:Duplicate symbol "__ch_info_tbl" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ip)"
+W0561320:Duplicate symbol "__ch_info_head" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(ip)"
+W0561320:Duplicate symbol "__ch_info_head" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(ip)"
+W0561320:Duplicate symbol "_R_t4_version" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(T4_Version)"
+W0561320:Duplicate symbol "_R_t4_version" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(T4_Version)"
+W0561320:Duplicate symbol "_net2hl_yn_xn" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "_net2hl_yn_xn" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_init_tcb" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_init_tcb" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__process_tcpip" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__process_tcpip" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__proc_api" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__proc_api" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_acpt" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_acpt" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_con" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_con" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_sht_cls" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_sht_cls" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_snddt" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_snddt" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_rcvdt" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_rcvdt" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_cpy_rwdat" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_cpy_rwdat" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__proc_rcv" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__proc_rcv" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_stat" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_stat" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_rst" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_rst" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_syn" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_syn" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_ack" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_ack" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_opt" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_opt" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_proc_data" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_proc_data" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_fin" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_fin" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_swin_updt" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_swin_updt" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__proc_snd" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__proc_snd" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_snd" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_snd" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_cancel_api" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_cancel_api" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_clr_rtq" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_clr_rtq" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_return_listen" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_return_listen" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_wup" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_wup" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_check_cepid_arg" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_check_cepid_arg" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_check_len_arg" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_check_len_arg" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_check_tmout_arg" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_check_tmout_arg" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_is_tcb_queue_over" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_is_tcb_queue_over" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_call_callback" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_call_callback" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_type_to_fn" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_type_to_fn" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_recv_polling" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_recv_polling" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_init_callback_info" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_init_callback_info" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_tcb" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_tcb" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "_head_tcb" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "_head_tcb" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tx_hdr" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tx_hdr" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_timer_cnt" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_timer_cnt" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_pre_timer_cnt" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_pre_timer_cnt" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "_tcpudp_open" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcpudp_open" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcpudp_close" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcpudp_close" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__getRAMsize_sub" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__getRAMsize_sub" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__getTcpRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__getTcpRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__getUdpRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__getUdpRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__getIpRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__getIpRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__getTblRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__getTblRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcpudp_get_ramsize" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcpudp_get_ramsize" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_acp_cep" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_acp_cep" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_con_cep" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_con_cep" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_sht_cep" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_sht_cep" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_cls_cep" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_cls_cep" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_snd_dat" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_snd_dat" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_rcv_dat" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_rcv_dat" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_can_cep" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_can_cep" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__tcp_api_req" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__tcp_api_req" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__tcp_api_slp" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__tcp_api_slp" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__tcp_clr_req" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__tcp_clr_req" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_read_stat" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_read_stat" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_force_clr" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_force_clr" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_udp_force_clr" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_udp_force_clr" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_set_mss" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_set_mss" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__ether_arp_tbl" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__ether_arp_tbl" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_udp_rcv_dat" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "_udp_rcv_dat" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "_udp_snd_dat" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "_udp_snd_dat" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "_udp_can_cep" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "_udp_can_cep" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_rcv" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_rcv" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_rcv_sub" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_rcv_sub" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_snd" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_snd" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_slp" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_slp" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_wup" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_wup" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__proc_udp_api" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__proc_udp_api" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_init" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_init" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_tmout" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_tmout" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__tcpudp_cksum" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__tcpudp_cksum" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_type_to_fn" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_type_to_fn" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_check_cepid_arg" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_check_cepid_arg" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_check_len_arg" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_check_len_arg" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_cb" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_cb" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__cksum" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_big.lib(cksum_rx_little)"
+W0561320:Duplicate symbol "__cksum" in "src\r_t4_rx\lib\T4_Library_rxv1_ether_little.lib(cksum_rx_little)"
+W0561320:Duplicate symbol "__ether_proc_rcv" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_rcv_arp" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_resolve" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_snd_arp" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_snd_ip" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_snd" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_add" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_del" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_init" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ether_p_rcv_buff" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ether)"
+W0561320:Duplicate symbol "__ip_rcv_hdr" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ip)"
+W0561320:Duplicate symbol "__ip_snd" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ip)"
+W0561320:Duplicate symbol "__ip_snd_icmp" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ip)"
+W0561320:Duplicate symbol "__ip_check_ipadd_proto" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ip)"
+W0561320:Duplicate symbol "__ip_check_multicast" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ip)"
+W0561320:Duplicate symbol "__ip_check_broadcast" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ip)"
+W0561320:Duplicate symbol "_data_link_buf_ptr" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ip)"
+W0561320:Duplicate symbol "__ch_info_tbl" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ip)"
+W0561320:Duplicate symbol "__ch_info_head" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(ip)"
+W0561320:Duplicate symbol "_R_t4_version" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(T4_Version)"
+W0561320:Duplicate symbol "_net2hl_yn_xn" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_init_tcb" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__process_tcpip" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__proc_api" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_acpt" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_con" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_sht_cls" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_snddt" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_rcvdt" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_cpy_rwdat" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__proc_rcv" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_stat" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_rst" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_syn" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_ack" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_opt" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_proc_data" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_fin" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_swin_updt" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__proc_snd" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_snd" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_cancel_api" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_clr_rtq" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_return_listen" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_wup" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_check_cepid_arg" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_check_len_arg" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_check_tmout_arg" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_is_tcb_queue_over" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_call_callback" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_type_to_fn" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_recv_polling" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_init_callback_info" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_tcb" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "_head_tcb" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tx_hdr" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_timer_cnt" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_pre_timer_cnt" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp)"
+W0561320:Duplicate symbol "_tcpudp_open" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcpudp_close" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__getRAMsize_sub" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__getTcpRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__getUdpRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__getIpRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__getTblRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcpudp_get_ramsize" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_acp_cep" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_con_cep" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_sht_cep" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_cls_cep" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_snd_dat" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_rcv_dat" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_can_cep" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__tcp_api_req" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__tcp_api_slp" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__tcp_clr_req" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_read_stat" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_force_clr" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_udp_force_clr" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_set_mss" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "__ether_arp_tbl" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(tcp_api)"
+W0561320:Duplicate symbol "_udp_rcv_dat" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "_udp_snd_dat" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "_udp_can_cep" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_rcv" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_rcv_sub" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_snd" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_slp" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_wup" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__proc_udp_api" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_init" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_tmout" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__tcpudp_cksum" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_type_to_fn" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_check_cepid_arg" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_check_len_arg" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__udp_cb" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(udp)"
+W0561320:Duplicate symbol "__cksum" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_big.lib(cksum_rx_little)"
+W0561320:Duplicate symbol "__ether_proc_rcv" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_rcv_arp" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_resolve" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_snd_arp" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_snd_ip" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_snd" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_add" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_del" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_arp_init" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ether_p_rcv_buff" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ether)"
+W0561320:Duplicate symbol "__ip_rcv_hdr" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ip)"
+W0561320:Duplicate symbol "__ip_snd" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ip)"
+W0561320:Duplicate symbol "__ip_snd_icmp" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ip)"
+W0561320:Duplicate symbol "__ip_check_ipadd_proto" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ip)"
+W0561320:Duplicate symbol "__ip_check_multicast" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ip)"
+W0561320:Duplicate symbol "__ip_check_broadcast" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ip)"
+W0561320:Duplicate symbol "_data_link_buf_ptr" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ip)"
+W0561320:Duplicate symbol "__ch_info_tbl" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ip)"
+W0561320:Duplicate symbol "__ch_info_head" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(ip)"
+W0561320:Duplicate symbol "_R_t4_version" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(T4_Version)"
+W0561320:Duplicate symbol "_net2hl_yn_xn" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_init_tcb" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__process_tcpip" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__proc_api" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_acpt" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_con" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_sht_cls" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_snddt" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_rcvdt" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_cpy_rwdat" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__proc_rcv" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_stat" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_rst" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_syn" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_ack" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_opt" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_proc_data" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_rcv_fin" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_swin_updt" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__proc_snd" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_snd" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_cancel_api" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_clr_rtq" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_return_listen" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_wup" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_check_cepid_arg" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_check_len_arg" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_check_tmout_arg" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_is_tcb_queue_over" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_call_callback" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_api_type_to_fn" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_recv_polling" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_init_callback_info" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_tcb" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "_head_tcb" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tx_hdr" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_timer_cnt" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "__tcp_pre_timer_cnt" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp)"
+W0561320:Duplicate symbol "_tcpudp_open" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcpudp_close" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__getRAMsize_sub" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__getTcpRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__getUdpRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__getIpRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__getTblRAMsize" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcpudp_get_ramsize" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_acp_cep" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_con_cep" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_sht_cep" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_cls_cep" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_snd_dat" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_rcv_dat" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_can_cep" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__tcp_api_req" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__tcp_api_slp" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__tcp_clr_req" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_read_stat" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_force_clr" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_udp_force_clr" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_tcp_set_mss" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "__ether_arp_tbl" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(tcp_api)"
+W0561320:Duplicate symbol "_udp_rcv_dat" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "_udp_snd_dat" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "_udp_can_cep" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_rcv" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_rcv_sub" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_snd" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_slp" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_wup" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__proc_udp_api" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_init" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_tmout" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__tcpudp_cksum" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_api_type_to_fn" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_check_cepid_arg" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_check_len_arg" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__udp_cb" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(udp)"
+W0561320:Duplicate symbol "__cksum" in "src\r_t4_rx\lib\T4_Library_rxv2_ether_little.lib(cksum_rx_little)"
+W0561100:Cannot find "PResetPRG" specified in option "start"
+W0561100:Cannot find "C$INIT" specified in option "start"
+W0561100:Cannot find "C$VTBL" specified in option "start"
+W0561100:Cannot find "PIntPRG" specified in option "start"
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+SI
+                                  00000020  0000041f       400   4
+SU
+                                  00000420  0000141f      1000   4
+B_1
+                                  00001420  00001770       351   1
+R_1
+                                  00001771  00001800        90   1
+B_2
+                                  00001802  00001853        52   2
+R_2
+                                  00001854  00001855         2   2
+B
+                                  00001858  00007743      5eec   4
+R
+                                  00007744  00007c5b       518   4
+B_ETHERNET_BUFFERS_1
+                                  00030000  000317ff      1800   1
+B_RX_DESC_1
+                                  00031800  0003181f        20   1
+B_TX_DESC_1
+                                  00031820  0003183f        20   1
+$ADDR_C_120040
+                                  00120040  00120043         4   1
+$ADDR_C_120048
+                                  00120048  0012004b         4   1
+$ADDR_C_120050
+                                  00120050  0012006f        20   1
+C_1
+                                  ffc00100  ffc002ae       1af   1
+C_2
+                                  ffc002b0  ffc004cf       220   2
+C
+                                  ffc004d0  ffc00687       1b8   4
+C$DSEC
+                                  ffc00688  ffc006ab        24   4
+C$BSEC
+                                  ffc006ac  ffc006c3        18   4
+C$VECT
+                                  ffc006c4  ffc00ac3       400   4
+D_1
+                                  ffc00ac4  ffc00b53        90   1
+D_2
+                                  ffc00b54  ffc00b55         2   2
+D
+                                  ffc00b58  ffc0106f       518   4
+P
+                                  ffc01070  ffc0a7e7      9778   1
+W_1
+                                  ffc0a7e8  ffc0a804        1d   1
+W_2
+                                  ffc0a806  ffc0a806         0   2
+W
+                                  ffc0a808  ffc0a808         0   4
+L
+                                  ffc0a808  ffc0a8a4        9d   4
+EXCEPTVECT
+                                  ffffff80  fffffffb        7c   4
+RESETVECT
+                                  fffffffc  ffffffff         4   4
