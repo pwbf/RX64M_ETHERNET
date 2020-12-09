@@ -171,11 +171,11 @@ const UB _udp_enable_zerochecksum[] = { 0, 0 };           /* 0 = disable, other 
 /****************************************************************************/
 const UH _ip_tblcnt[] = { 3, 3 };
 
-#define MY_IP_ADDR0     10,4,12,100            /* Local IP address  */
+#define MY_IP_ADDR0     10,4,12,120            /* Local IP address  */
 #define GATEWAY_ADDR0   10,4,12,1                /* Gateway address (invalid if all 0s) */
 #define SUBNET_MASK0    255,255,252,0          /* Subnet mask  */
 
-#define MY_IP_ADDR1     10,4,12,101           /* Local IP address  */
+#define MY_IP_ADDR1     10,4,12,121           /* Local IP address  */
 #define GATEWAY_ADDR1   10,4,12,1                /* Gateway address (invalid if all 0s) */
 #define SUBNET_MASK1    255,255,252,0          /* Subnet mask  */
 

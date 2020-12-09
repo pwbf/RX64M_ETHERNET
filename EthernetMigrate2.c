@@ -81,9 +81,24 @@ Arguments       : none
 Return value    : none
 ******************************************************************************/
 
+	uint8_t s_data[4] = {0xAD, 0xBC, 0x95, 0xFF};
+	uint8_t r_data[1] = {0x00};
+	uint8_t *ps_data; 
+	uint8_t *pr_data;
+typedef struct cep_
+{
+    uint8_t  status;        /* Connection state of the endpoint         */
+    uint8_t  *buff_ptr;     /* Top address of the transmission and reception buffer    */
+    int32_t  remain_data;   /* remainder transmission and reception number of bytes    */
+    int32_t  now_data;      /* The number of bytes finished with transmission and reception  */
+    T_IPV4EP dstaddr;       /* Client IP address            */
+    T_IPV4EP myaddr;        /* Server IP address            */
+    uint8_t  api_cancel;    /* API cancel request flag            */
+} FTP_CEP;	
+	FTP_CEP   *cep;
 void main(void)
 {
-	printf("Hi--\n");
+	printf("System Initial\n");
     ER          ercd;
     W           ramsize;
     volatile DHCP       dhcp;
@@ -106,10 +121,10 @@ void main(void)
         R_ETHER_LinkProcess(1);
     }
 
-    if (!r_dhcp_open(&dhcp, (unsigned char*)tcpudp_work, &_myethaddr[0][0]))
-    {
-        set_tcpudp_env(&dhcp);
-    }
+    // if (!r_dhcp_open(&dhcp, (unsigned char*)tcpudp_work, &_myethaddr[0][0]))
+    // {
+        // set_tcpudp_env(&dhcp);
+    // }
     CloseTimer();
 
     if (NULL != &dhcp)
@@ -136,8 +151,74 @@ void main(void)
     /* Init DNS clienr */
     R_dns_init();
 
-    /* Sample code main loop */
-    while( 1 )
+    int32_t rtn = 0x00;
+	
+	printf("pack TCP packet\n");
+	T_IPV4EP dst, src;
+	dst.ipaddr = 0x0A040F64; 	//10.4.15.100
+	//dst.ipaddr = 0x2D4D1662;	//45.77.22.98
+	dst.portno = 9527;
+	printf("packed\n");
+	printf("Request TCP connection\n");
+	
+	rtn = tcp_con_cep(1, &src, &dst, TMO_NBLK);
+	
+	switch(rtn){
+		case E_OK:
+			printf("connection established\n");
+			break;
+		case E_PAR:
+			printf("invalid \"tmout\" value\n");
+			break;
+		case E_QOVR:
+			printf("API does not end\n");
+			break;
+		case E_OBJ:
+			printf("Object status error\n");
+			break;
+		case E_TMOUT:
+			printf("Time out\n");
+			break;
+		case E_WBLK:
+			printf("non-blocking call is accepted\n");
+			break;
+	}
+	if(rtn == E_OK || rtn == E_WBLK){
+		// rtn = tcp_snd_dat(1, &ps_data, 4, TMO_NBLK);
+		while(1){
+			rtn = tcp_rcv_dat(1, cep->buff_ptr, 1, TMO_NBLK);
+			if(rtn == 0) {
+				printf("rtn==0\n");
+				break;
+			}
+			else{
+				printf("&cep->buff_ptr = 0x%X\n",&(cep->buff_ptr));
+			}
+			
+			/*switch(rtn){
+				case E_PAR:
+					printf("invalid \"tmout\" value\n");
+					break;
+				case E_QOVR:
+					printf("API does not end\n");
+					break;
+				case E_OBJ:
+					printf("Object status error\n");
+					break;
+				case E_TMOUT:
+					printf("Time out\n");
+					break;
+				case E_WBLK:
+					printf("non-blocking call is accepted\n");
+					break;
+				default:
+					printf("Terminated normally rtn=%d\n",rtn);
+			}*/
+		}
+	}
+	
+	printf("Entering MAIN WHILE\n");
+    while(1)
     {
         /* Ethernet driver link up processing */
         R_ETHER_LinkProcess(0);
@@ -156,15 +237,24 @@ Return value    : none
 ******************************************************************************/
 void    set_tcpudp_env(DHCP *dhcp)
 {
+	printf("set_tcpudp_env\n");
     if (NULL != dhcp)
     {
+		printf("DHCP replied!\n");
         memcpy(tcpudp_env[0].ipaddr, dhcp->ipaddr, 4);
         memcpy(tcpudp_env[0].maskaddr, dhcp->maskaddr, 4);
         memcpy(tcpudp_env[0].gwaddr, dhcp->gwaddr, 4);
+		printf("\nDHCP->IP:");
+		printf(dhcp->ipaddr);
+		printf("\nDHCP->MASK:");
+		printf(dhcp->maskaddr);
+		printf("\nDHCP->Gateway:");
+		printf(dhcp->gwaddr);
 
         memcpy((char *)dnsaddr1, (char *)dhcp->dnsaddr, 4);
         memcpy((char *)dnsaddr2, (char *)dhcp->dnsaddr2, 4);
     }
+	printf("DHCP no reply\n");
 }
 
 /******************************************************************************

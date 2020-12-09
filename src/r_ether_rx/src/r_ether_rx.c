@@ -814,6 +814,7 @@ void R_ETHER_LinkProcess(uint32_t channel)
     /* When the link is up */
     if (ETHER_FLAG_ON_LINK_ON == lchng_flag[channel])
     {  
+	printf(">> ETHER_FLAG_ON_LINK_ON << CH=%d\n",channel);
         /* 
          * The Link Up/Down is confirmed by the Link Status bit of PHY register1, 
          * because the LINK signal of PHY-LSI is used for LED indicator, and 
@@ -822,6 +823,7 @@ void R_ETHER_LinkProcess(uint32_t channel)
         ret = R_ETHER_CheckLink_ZC(channel);
         if (ETHER_SUCCESS == ret)
         {
+			printf(">> ETHER_SUCCESS << CH=%d\n",channel);
             /*
              * The status of the LINK signal became "link-up" even if PHY-LSI did not detect "link-up"
              * after a reset. To avoid this wrong detection, processing in R_ETHER_LinkProcess has been modified to
@@ -847,6 +849,7 @@ void R_ETHER_LinkProcess(uint32_t channel)
         }
         else
         {
+			printf(">> !!ETHER_SUCCESS << CH=%d\n",channel);
             /* no process */
         }
     }
@@ -854,6 +857,7 @@ void R_ETHER_LinkProcess(uint32_t channel)
     /* When the link is down */
     else if (ETHER_FLAG_ON_LINK_OFF == lchng_flag[channel])
     {
+	printf(">> ETHER_FLAG_ON_LINK_OFF << CH=%d\n",channel);
         lchng_flag[channel] = ETHER_FLAG_OFF;
 
         /* 
@@ -864,6 +868,7 @@ void R_ETHER_LinkProcess(uint32_t channel)
         ret = R_ETHER_CheckLink_ZC(channel);
         if (ETHER_ERR_OTHER == ret)
         {
+			printf(">> ETHER_ERR_OTHER << CH=%d\n",channel);
             pether_ch  = g_eth_control_ch[channel].pether_control;
             phy_access = g_eth_control_ch[channel].phy_access;
             etherc_adr = pether_ch[phy_access].petherc;
@@ -883,6 +888,7 @@ void R_ETHER_LinkProcess(uint32_t channel)
         }
         else
         {
+			printf(">> !!ETHER_ERR_OTHER << CH=%d\n",channel);
             ; /* no operation */
         }
     }
