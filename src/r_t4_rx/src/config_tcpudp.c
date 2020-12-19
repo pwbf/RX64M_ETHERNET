@@ -43,6 +43,7 @@
 extern ER ftp_callback(ID cepid, FN fncd , VP p_parblk);
 extern ER ftp_data_callback(ID cepid, FN fncd , VP p_parblk);
 extern ER dns_callback(ID cepid, FN fncd , VP p_parblk);*/
+extern ER tcp_callback(ID cepid, FN fncd , VP p_parblk);
 
 /****************************************************************************/
 /**********************     TCP-related definition     **********************/
@@ -93,7 +94,7 @@ T_TCP_CCEP tcp_ccep[18] =
          top address of receive window buffer, size of receive window buffer,
          address of callback routine }
     */
-    0
+    { 0, 0, 0, 0, 1460, tcp_callback },
         /* HTTP server use setting below. */
         //{ 0, 0, 0, 0, 1460, http_callback },
         //{ 0, 0, 0, 0, 1460, http_callback },

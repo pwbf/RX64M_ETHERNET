@@ -85,6 +85,7 @@ Return value    : none
 	uint8_t r_data[1] = {0x00};
 	uint8_t *ps_data; 
 	uint8_t *pr_data;
+	
 typedef struct cep_
 {
     uint8_t  status;        /* Connection state of the endpoint         */
@@ -94,8 +95,14 @@ typedef struct cep_
     T_IPV4EP dstaddr;       /* Client IP address            */
     T_IPV4EP myaddr;        /* Server IP address            */
     uint8_t  api_cancel;    /* API cancel request flag            */
-} FTP_CEP;	
-	FTP_CEP   *cep;
+} FTP_CEP;
+uint8_t r_buff[272]={0};
+uint8_t t_buff[]={0x54,0x48,0x55,0x20,0x41,0x53,0x54,0x41,0x52,0x43};
+//ascii "THU ASTARC"
+uint8_t t_buff_len = sizeof(t_buff)/sizeof(t_buff[0]);
+
+ER tcp_callback(ID cepid, FN fncd , VP p_parblk);
+
 void main(void)
 {
 	printf("System Initial\n");
@@ -156,10 +163,13 @@ void main(void)
 	printf("pack TCP packet\n");
 	T_IPV4EP dst, src;
 	dst.ipaddr = 0x0A040F64; 	//10.4.15.100
+	// dst.ipaddr = 0x0A5A09FB; 	//10.90.9.251
 	//dst.ipaddr = 0x2D4D1662;	//45.77.22.98
 	dst.portno = 9527;
 	printf("packed\n");
 	printf("Request TCP connection\n");
+	
+	// tcp_con_cep((data_cepid), &(data_pcep->myaddr), &(data_pcep->dstaddr), TMO_NBLK);
 	
 	rtn = tcp_con_cep(1, &src, &dst, TMO_NBLK);
 	
@@ -183,40 +193,6 @@ void main(void)
 			printf("non-blocking call is accepted\n");
 			break;
 	}
-	if(rtn == E_OK || rtn == E_WBLK){
-		// rtn = tcp_snd_dat(1, &ps_data, 4, TMO_NBLK);
-		while(1){
-			rtn = tcp_rcv_dat(1, cep->buff_ptr, 1, TMO_NBLK);
-			if(rtn == 0) {
-				printf("rtn==0\n");
-				break;
-			}
-			else{
-				printf("&cep->buff_ptr = 0x%X\n",&(cep->buff_ptr));
-			}
-			
-			/*switch(rtn){
-				case E_PAR:
-					printf("invalid \"tmout\" value\n");
-					break;
-				case E_QOVR:
-					printf("API does not end\n");
-					break;
-				case E_OBJ:
-					printf("Object status error\n");
-					break;
-				case E_TMOUT:
-					printf("Time out\n");
-					break;
-				case E_WBLK:
-					printf("non-blocking call is accepted\n");
-					break;
-				default:
-					printf("Terminated normally rtn=%d\n",rtn);
-			}*/
-		}
-	}
-	
 	printf("Entering MAIN WHILE\n");
     while(1)
     {
@@ -256,7 +232,107 @@ void    set_tcpudp_env(DHCP *dhcp)
     }
 	printf("DHCP no reply\n");
 }
-
 /******************************************************************************
 End of file
 ******************************************************************************/
+
+ER tcp_callback(ID cepid, FN fncd , VP p_parblk){
+
+    ER   parblk = *(ER *)p_parblk;
+    ER   ercd;
+    ID   cepid_oft;
+	printf("cepid=0x%X\n", cepid);
+	printf("fncd=0x%X\n", fncd);
+	switch (fncd){
+		case TFN_TCP_CRE_REP:
+			printf("case TFN_TCP_CRE_REP\n");
+			break;
+		case TFN_TCP_DEL_REP:
+			printf("case TFN_TCP_DEL_REP\n");
+			break;
+		case TFN_TCP_CRE_CEP:
+			printf("case TFN_TCP_CRE_CEP\n");
+			break;
+		case TFN_TCP_DEL_CEP:
+			printf("case TFN_TCP_DEL_CEP\n");
+			break;
+		case TFN_TCP_ACP_CEP:
+			printf("case TFN_TCP_ACP_CEP\n");
+			break;
+		case TFN_TCP_CON_CEP:
+			printf("case TFN_TCP_CON_CEP\n");
+			printf("TCP [ACK] or [PSH, ACK]\n");
+			tcp_snd_dat(cepid, &t_buff, t_buff_len, TMO_NBLK);
+			break;
+		case TFN_TCP_SHT_CEP:
+			printf("case TFN_TCP_SHT_CEP\n");
+			break;
+		case TFN_TCP_CLS_CEP:
+			printf("case TFN_TCP_CLS_CEP\n");
+			break;
+		case TFN_TCP_SND_DAT:
+			printf("case TFN_TCP_SND_DAT\n");
+			// tcp_snd_dat(cepid, &t_buff, t_buff_len, TMO_NBLK);
+			printf("TCP [FIN]\n");
+			tcp_cls_cep(cepid, TMO_NBLK);
+			break;
+		case TFN_TCP_RCV_DAT:
+			printf("case TFN_TCP_RCV_DAT\n");
+			break;
+		case TFN_TCP_GET_BUF:
+			printf("case TFN_TCP_GET_BUF\n");
+			break;
+		case TFN_TCP_SND_BUF:
+			printf("case TFN_TCP_SND_BUF\n");
+			break;
+		case TFN_TCP_RCV_BUF:
+			printf("case TFN_TCP_RCV_BUF\n");
+			break;
+		case TFN_TCP_REL_BUF:
+			printf("case TFN_TCP_REL_BUF\n");
+			break;
+		case TFN_TCP_SND_OOB:
+			printf("case TFN_TCP_SND_OOB\n");
+			break;
+		case TFN_TCP_RCV_OOB:
+			printf("case TFN_TCP_RCV_OOB\n");
+			break;
+		case TFN_TCP_CAN_CEP:
+			printf("case TFN_TCP_CAN_CEP\n");
+			break;
+		case TFN_TCP_SET_OPT:
+			printf("case TFN_TCP_SET_OPT\n");
+			break;
+		case TFN_TCP_GET_OPT:
+			printf("case TFN_TCP_GET_OPT\n");
+			break;
+		case TFN_TCP_ALL:
+			printf("case 0\n");
+			break;
+		case TFN_UDP_CRE_CEP:
+			printf("case TFN_UDP_CRE_CEP\n");
+			break;
+		case TFN_UDP_DEL_CEP:
+			printf("case TFN_UDP_DEL_CEP\n");
+			break;
+		case TFN_UDP_SND_DAT:
+			printf("case TFN_UDP_SND_DAT\n");
+			break;
+		case TFN_UDP_RCV_DAT:
+			printf("case TFN_UDP_RCV_DAT\n");
+			break;
+		case TFN_UDP_CAN_CEP:
+			printf("case TFN_UDP_CAN_CEP\n");
+			break;
+		case TFN_UDP_SET_OPT:
+			printf("case TFN_UDP_SET_OPT\n");
+			break;
+		case TFN_UDP_GET_OPT:
+			printf("case TFN_UDP_GET_OPT\n");
+			break;
+		default:
+			printf("NOPE\n");
+			break;
+	}
+    return(0);
+}
