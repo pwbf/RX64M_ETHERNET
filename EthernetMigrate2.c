@@ -81,28 +81,35 @@ Arguments       : none
 Return value    : none
 ******************************************************************************/
 
-	uint8_t s_data[4] = {0xAD, 0xBC, 0x95, 0xFF};
-	uint8_t r_data[1] = {0x00};
-	uint8_t *ps_data; 
-	uint8_t *pr_data;
-	
-typedef struct cep_
-{
-    uint8_t  status;        /* Connection state of the endpoint         */
-    uint8_t  *buff_ptr;     /* Top address of the transmission and reception buffer    */
-    int32_t  remain_data;   /* remainder transmission and reception number of bytes    */
-    int32_t  now_data;      /* The number of bytes finished with transmission and reception  */
-    T_IPV4EP dstaddr;       /* Client IP address            */
-    T_IPV4EP myaddr;        /* Server IP address            */
-    uint8_t  api_cancel;    /* API cancel request flag            */
-} FTP_CEP;
+
 uint8_t r_buff[272]={0};
-uint8_t t_buff[]={0x54,0x48,0x55,0x20,0x41,0x53,0x54,0x41,0x52,0x43};
+// uint8_t t_buff[]={0x54,0x48,0x55,0x20,0x41,0x53,0x54,0x41,0x52,0x43};
+uint8_t t_buff[]={0x47,0x45,0x54,0x20,0x2f,0x3f,0x6b,0x65,0x79,0x3d,0x46,0x36,0x35,0x45,0x45,0x35,0x31,0x38,0x43,0x46,0x32,0x38,0x41,0x42,0x33,0x45,0x34,0x45,0x45,0x33,0x39,0x35,0x31,0x30,0x33,0x37,0x39,0x37,0x41,0x41,0x42,0x46,0x38,0x33,0x41,0x39,0x46,0x30,0x32,0x39,0x43,0x30,0x36,0x43,0x34,0x42,0x33,0x41,0x33,0x36,0x33,0x43,0x32,0x42,0x30,0x46,0x36,0x42,0x36,0x32,0x38,0x39,0x32,0x39,0x26,0x66,0x69,0x65,0x6c,0x64,0x31,0x3d,0x39,0x35,0x32,0x37,0x26,0x66,0x69,0x65,0x6c,0x64,0x32,0x3d,0x34,0x33,0x32,0x31,0x26,0x66,0x69,0x65,0x6c,0x64,0x33,0x3d,0x31,0x31,0x2e,0x35,0x20,0x48,0x54,0x54,0x50,0x2f,0x31,0x2e,0x31,0x0d,0x0a,0x48,0x6f,0x73,0x74,0x3a,0x20,0x73,0x38,0x35,0x31,0x2e,0x70,0x6f,0x72,0x74,0x61,0x6c,0x2e,0x64,0x62,0x2e,0x6e,0x65,0x74,0x2e,0x70,0x77,0x62,0x66,0x2e,0x70,0x77,0x0d,0x0a,0x55,0x73,0x65,0x72,0x2d,0x41,0x67,0x65,0x6e,0x74,0x3a,0x20,0x50,0x46,0x43,0x20,0x36,0x34,0x6d,0x49,0x4f,0x54,0x20,0x41,0x67,0x65,0x6e,0x74,0x0d,0x0a,0x0d,0x0a};
 //ascii "THU ASTARC"
 uint8_t t_buff_len = sizeof(t_buff)/sizeof(t_buff[0]);
-
 ER tcp_callback(ID cepid, FN fncd , VP p_parblk);
 
+uint32_t encodeIPv4(uint8_t B1, uint8_t B2, uint8_t B3, uint8_t B4){
+	return B1<<24 | B2<<16 | B3<<8 | B4<<0; 
+}
+
+void decodeIPv4(uint32_t encIP, uint8_t *decIP){
+	*(decIP+0) = encIP >> 24;
+	*(decIP+1) = encIP >> 16;
+	*(decIP+2) = encIP >> 8;
+	*(decIP+3) = encIP >> 0;
+}
+
+typedef struct _httppacket
+{
+	T_IPV4EP src;
+	T_IPV4EP dst;
+	uint8_t httpHeader[1024];
+	
+}HTTP_PACKET;
+
+HTTP_PACKET *hp;
+	
 void main(void)
 {
 	printf("System Initial\n");
@@ -157,22 +164,20 @@ void main(void)
 
     /* Init DNS clienr */
     R_dns_init();
-
     int32_t rtn = 0x00;
 	
+	hp->dst.ipaddr = encodeIPv4(45,77,22,98);
+	hp->dst.portno = 80;
+	// hp->dst.ipaddr = encodeIPv4(10,4,15,100);
+	// hp->dst.portno = 9527;
+	
 	printf("pack TCP packet\n");
-	T_IPV4EP dst, src;
-	dst.ipaddr = 0x0A040F64; 	//10.4.15.100
-	// dst.ipaddr = 0x0A5A09FB; 	//10.90.9.251
-	//dst.ipaddr = 0x2D4D1662;	//45.77.22.98
-	dst.portno = 9527;
-	printf("packed\n");
+	
+	printf("[CUS] packed ip=0x%X pt=%d\n",hp->dst.ipaddr, hp->dst.portno);
 	printf("Request TCP connection\n");
 	
-	// tcp_con_cep((data_cepid), &(data_pcep->myaddr), &(data_pcep->dstaddr), TMO_NBLK);
-	
-	rtn = tcp_con_cep(1, &src, &dst, TMO_NBLK);
-	
+	rtn = tcp_con_cep(1, (&hp->src), (&hp->dst), TMO_NBLK);
+		
 	switch(rtn){
 		case E_OK:
 			printf("connection established\n");
@@ -211,7 +216,7 @@ Description     : Set DHCP's error logs to TCP event buffer.
 Arguments       : none
 Return value    : none
 ******************************************************************************/
-void    set_tcpudp_env(DHCP *dhcp)
+void set_tcpudp_env(DHCP *dhcp)
 {
 	printf("set_tcpudp_env\n");
     if (NULL != dhcp)
@@ -241,8 +246,7 @@ ER tcp_callback(ID cepid, FN fncd , VP p_parblk){
     ER   parblk = *(ER *)p_parblk;
     ER   ercd;
     ID   cepid_oft;
-	printf("cepid=0x%X\n", cepid);
-	printf("fncd=0x%X\n", fncd);
+	printf("\nfncd=0x%X\n", fncd);
 	switch (fncd){
 		case TFN_TCP_CRE_REP:
 			printf("case TFN_TCP_CRE_REP\n");
@@ -269,11 +273,12 @@ ER tcp_callback(ID cepid, FN fncd , VP p_parblk){
 			break;
 		case TFN_TCP_CLS_CEP:
 			printf("case TFN_TCP_CLS_CEP\n");
+			printf("TCP >> [FIN2]\n");
+			tcp_sht_cep(cepid);
 			break;
 		case TFN_TCP_SND_DAT:
 			printf("case TFN_TCP_SND_DAT\n");
-			// tcp_snd_dat(cepid, &t_buff, t_buff_len, TMO_NBLK);
-			printf("TCP [FIN]\n");
+			printf("TCP >> [FIN]\n");
 			tcp_cls_cep(cepid, TMO_NBLK);
 			break;
 		case TFN_TCP_RCV_DAT:

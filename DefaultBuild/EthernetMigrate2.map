@@ -1,4 +1,4 @@
-Renesas Optimizing Linker (W3.02.00 )             19-Dec-2020 16:27:13
+Renesas Optimizing Linker (W3.02.00 )             28-Dec-2020 15:03:20
 
 *** Options ***
 
@@ -467,15 +467,15 @@ SU
 B_1
                                   00001420  00001770       351   1
 R_1
-                                  00001771  00001920       1b0   1
+                                  00001771  000019cc       25c   1
 B_2
-                                  00001922  00001973        52   2
+                                  000019ce  00001a1f        52   2
 R_2
-                                  00001974  00001975         2   2
+                                  00001a20  00001a21         2   2
 B
-                                  00001978  0000786b      5ef4   4
+                                  00001a24  00007913      5ef0   4
 R
-                                  0000786c  00007d83       518   4
+                                  00007914  00007e2b       518   4
 B_ETHERNET_BUFFERS_1
                                   00030000  000317ff      1800   1
 B_RX_DESC_1
@@ -501,21 +501,21 @@ C$BSEC
 C$VECT
                                   ffc006c4  ffc00ac3       400   4
 D_1
-                                  ffc00ac4  ffc00c73       1b0   1
+                                  ffc00ac4  ffc00d1f       25c   1
 D_2
-                                  ffc00c74  ffc00c75         2   2
+                                  ffc00d20  ffc00d21         2   2
 D
-                                  ffc00c78  ffc0118f       518   4
+                                  ffc00d24  ffc0123b       518   4
 P
-                                  ffc01190  ffc0acbc      9b2d   1
+                                  ffc0123c  ffc0adaf      9b74   1
 W_1
-                                  ffc0acbd  ffc0acd9        1d   1
+                                  ffc0adb0  ffc0adcc        1d   1
 W_2
-                                  ffc0acda  ffc0acda         0   2
+                                  ffc0adce  ffc0adce         0   2
 W
-                                  ffc0acdc  ffc0acdc         0   4
+                                  ffc0add0  ffc0add0         0   4
 L
-                                  ffc0acdc  ffc0b1dc       501   4
+                                  ffc0add0  ffc0b2ec       51d   4
 EXCEPTVECT
                                   ffffff80  fffffffb        7c   4
 RESETVECT
